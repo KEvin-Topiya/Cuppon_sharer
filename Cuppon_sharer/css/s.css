@@ -1,0 +1,15 @@
+.flx{display: flex;}
+
+.jcsa{justify-content: space-around;}
+
+.jcsb{justify-content: space-between;}
+
+.jcse{justify-content: space-evenly;}
+
+.jcc{justify-content: center;}
+
+.flxdc{flex-direction: column;}
+
+.flxdr{flex-direction: row;}
+
+.flxwrp{flex-wrap: wrap;}

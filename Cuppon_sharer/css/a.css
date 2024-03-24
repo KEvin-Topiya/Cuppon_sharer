@@ -1,0 +1,390 @@
+@font-face {
+    font-family: font1;
+    src: url(static/Montserrat-Regular.ttf);
+}
+/* Gloabal-------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:font1;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --dm: 36;
+    --c1: #FFF;     /*--white--*/
+    --c2: #ecf0f3;  /*--light sky blue--*/
+    --c3: #FCA311;  /*--yello--*/
+    --c4: #14213D;  /*--dark blue--*/
+    --c5: #000;     /*---black--*/
+    --c6: #1f78d2;  /*--link blue--*/
+}
+
+body{
+    background-color:var(--c2); 
+}
+.box{
+    width: 80%;
+    height:fit-content;
+    margin:1.5rem auto;
+}
+.box2{
+    height:auto;
+    width: 80%;
+    padding:1.5rem;
+    margin:1.5rem auto;
+}
+
+.fcenter{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.lcenter{
+    display: grid;
+    justify-content: center;
+}
+
+.btn1 {
+    padding: .8rem !important;
+    color: #FCA311 !important;
+    font-weight: 600 !important;
+    background-color: var(--c1) !important;
+    border-radius: 10px !important;
+    border: 1px solid var(--c4) !important;
+    position: relative;
+    margin: auto auto;
+}
+    .btn1:hover {
+        border: none !important;
+        background-color: var(--c3) !important;
+        color: var(--c4) !important;
+        animation: btn 4s infinite !important;
+    }
+
+.shadow1{
+    box-shadow: 15px 15px 30px #d1d9e6,-15px -15px 30px #fff;
+}
+
+.icn{
+    height:2rem !important;
+    width:2rem !important;
+    transform:scale(120%);
+}
+
+
+/* end-global--------- */
+
+/* nva----------- */
+
+.uimg {
+    background-color: var(--c2);
+    height: 3.7rem;
+    width: 3.7rem;
+    border-radius: 50%;
+}
+
+    .uimg img {
+        margin-top: 0.1rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+    }
+
+ .t{
+        margin-top:-1rem;
+        color:var(--c2);
+    }
+
+
+.ac:hover, .ac:hover .t {
+    background-color: transparent;
+    display: flex;
+    color: var(--c4);
+    margin-top:unset;
+    border: none;
+    text-align: center;
+    line-height: 3.5rem;
+}
+nav {
+    height: 100vh;
+    width: 5%;
+    z-index: 11;
+    float: left;
+    left: 0;
+    position:fixed;
+    background-color: var(--c4);
+    text-align: center;
+    padding-top: 2rem;
+    line-height: 4rem;
+}
+
+nav svg{
+    height:1.8rem;
+    width: 1.8rem;   
+}
+
+
+.home_icn path{
+    fill: var(--c1);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover::after  {
+    content: var(--c);
+    color: var(--c5);
+    font-weight: bold;
+}
+
+a:hover svg{
+    transform: translateY(0.5rem);
+
+}
+a:hover{
+    border-radius: 0 30px 30px 0;
+    border-bottom:2px solid var(--c3);
+    width: 10rem;;
+    text-align: left;
+    background-color: var(--c1);
+}
+
+a:not(:hover) circle,g{
+fill:white;
+}
+a:not(:hover) animate{
+    fill:none;
+    }
+a:hover   path,circle{
+    fill:#FCA311;
+}
+
+.active {
+    border-radius: 0 30px 30px 0;
+    border-bottom: 2px solid var(--c3);
+    width: 8rem;
+    text-align: left;
+    background-color: var(--c1);
+}
+
+.active::after {
+        content: var(--c);
+        color: var(--c5);
+        font-weight: bold;
+ }
+
+.active, svg {
+transform: translateY(0.5rem);
+}
+
+.active path, circle {
+    fill: #FCA311;
+} 
+
+/* end-nav--------------- */
+
+
+
+/* content-body-------------- */
+section{
+    height:calc(100vh - 3rem);
+}
+.body{
+    height: 100%;
+    width:95%;
+    margin-left:5%;
+    overflow: auto;
+}
+.body header{
+    background-color: var(--c3);
+    color: var(--c4);
+    line-height: 3rem;
+    margin-bottom:2rem;
+    font-size: x-large;
+    text-align: center;
+    
+}
+.body .ad{
+    height: 15rem;
+    background-color: var(--c1);
+}
+
+/* search */
+.body .search{
+    height:auto;
+    width: fit-content;
+    padding: 0.5em; 
+    margin: auto;
+    border-radius: 5px;
+    background: var(--c1);
+}
+.body .search input{
+    height: 30px; 
+    border: 1px solid var(--c2);
+    width: 150%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-left: 0.7rem;
+}
+.body .search button{
+    border: none;
+    margin:auto  1rem;
+}
+/* end search */
+
+/* cat fram */
+
+.body .fram{
+    min-height: 50%;
+    padding: 2rem;
+    background: var(--c1);
+    border-radius: 10px;
+}
+/* end cat fram */
+/* end-content-body------------- */
+
+
+/* footer------- */
+footer{
+    width:100%;
+    bottom: 0;
+    height:3rem;
+    margin-left:5%;
+    color: var(--c4);
+    background-color:var(--c3);
+}
+
+footer span{
+    line-height: 3rem;
+    margin-left:3rem;
+    
+}
+/* end-footer----- */
+
+/* login & signup & password page */
+
+.login{
+    text-align: left ;
+    padding: 2rem;
+    background-color: var(--c1);
+    border-radius: 10px;
+    
+}
+.login input,select{
+    padding: .5rem;
+    border-radius: 10px;
+    border: none;
+    background-color:var(--c2);
+}
+
+select:focus{
+    color:var(--c3);
+    
+}
+.login h2{
+    color: var(--c3);
+}
+.login a{
+    font-size: x-small;
+    text-align: end !important;
+}
+
+.login input:focus{
+    /* background-color: var(--c4); */
+    color: var(--c3);
+    outline: none;
+}
+
+table{
+    border-spacing:1rem;
+}
+.login input::placeholder{
+    color: var(--c4);
+}
+/* end--login page */
+
+
+
+/* animation */
+.mygif {
+    position: absolute;
+    height:100%;
+    width:auto;
+    z-index: 11;
+}
+@keyframes btn {
+    0%{transform: rotate(0deg);}
+    10%{transform: rotate(calc(1 * 36deg));}
+    20%{transform: rotate(calc(2 * 36deg));}
+    30%{transform: rotate(calc(3 * 36deg));}
+    40%{transform: rotate(calc(4 * 36deg));}
+    50%{transform: rotate(calc(5 * 36deg));}
+    60%{transform: rotate(calc(6 * 36deg));}
+    70%{transform: rotate(calc(7 * 36deg));}
+    80%{transform: rotate(calc(8 * 36deg));}
+    90%{transform: rotate(calc(9 * 36deg));}
+    98%{transform: rotate(calc(10 * 36degdeg));}
+    100%{transform: rotate(0);}
+}
+
+/*---grid view ----*/
+.tbl {
+    width: 100%;
+    border:none;
+    color:var(--c3);
+    text-align:center;
+}
+
+.tbl td, .tbl th {
+    padding: 8px;
+    border:none;
+}
+.tbl tr{
+    color:var(--c4);
+}
+.tbl tr:hover{
+    background:var(--c1);
+    color:var(--c6)
+}
+.tbl tr:nth-child(1) {
+        background-color:var(--c4);
+        color:var(--c3);
+}
+
+.edtbox{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:100vh;
+    width:50vw;
+    background-color:crimson;   
+}
+
+/*------ category icon------*/
+.cat_img{
+    height:10rem;
+    width:10rem;
+}
+
+#ContentPlaceHolder2_DataList1 td{
+    text-align:center;
+}
+
+#ContentPlaceHolder2_DataList1 td a{
+    text-decoration:none;
+    color:var(--c4);
+}
+    .itm:hover{
+    transform:scale(110%);
+    box-shadow:.5rem .5rem .5rem grey;
+    
+}
