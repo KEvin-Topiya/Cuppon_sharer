@@ -16,11 +16,11 @@
      
     </div>
 
-    <div class="fram box flx flxwrp shadow1">
-        <asp:DataList ID="DataList1" CssClass="catfrm" runat="server" RepeatDirection="Horizontal">
+    <div class="fram box flx flxwrp jcsb shadow1">
+        <asp:DataList ID="DataList1" CssClass="catfrm" runat="server" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand">
             <ItemTemplate >
                 <div class="itm">
-                <asp:ImageButton ID="ImageButton1" runat="server" CommandName="cmd_cat" CssClass="cat_img" ImageUrl='<%# Eval("img") %>' />
+                <asp:ImageButton ID="ImageButton1" runat="server" CommandName="cmd_cat" CssClass="cat_img" ImageUrl='<%# Eval("img") %>' CommandArgument='<%# Eval("Cat_name") %>' />
                 <br />
                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Cat_name") %>' Text='<%# Eval("Cat_name") %>' CommandName="cmd_cat"></asp:LinkButton>
                 </div>

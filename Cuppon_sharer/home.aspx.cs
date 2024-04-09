@@ -23,8 +23,12 @@ namespace Cuppon_sharer
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+
             getcon();
             filldata(cs.fetchcat("category_tbl"));
+            }
            
         }
         void filldata(DataSet ds)
@@ -36,13 +40,23 @@ namespace Cuppon_sharer
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
+            String wh = "";
             
             getcon();
-            da = new SqlDataAdapter("select * from category_tbl where Cat_name='"+serch.Text+"' ", con);
+            if (serch.Text != "")
+            {
+                wh += "where Cat_name='"+serch.Text + "'";   
+            }
+            da = new SqlDataAdapter("select * from category_tbl "+wh+" ", con);
             ds = new DataSet();
             da.Fill(ds);
             filldata(ds);
 
+        }
+
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            Response.Redirect("cupponList.aspx?cat=" + e.CommandArgument);
         }
     }
 }

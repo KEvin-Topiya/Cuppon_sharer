@@ -45,7 +45,7 @@
             <tr>
                 <th>Discount:</th>
                 <td>
-                    <asp:TextBox ID="txdis" runat="server"></asp:TextBox></td>
+                    <asp:TextBox ID="txdis" runat="server" TextMode="Number"></asp:TextBox></td>
             </tr>
             <tr>
                  <th class="auto-style1">Company(optional):</th>

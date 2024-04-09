@@ -81,6 +81,7 @@
     <Content Include="css\OFL.txt" />
     <Content Include="css\README.txt" />
     <Content Include="css\s.css" />
+    <Content Include="cupponList.aspx" />
     <Content Include="forgotpass.aspx" />
     <Content Include="home.aspx" />
     <Content Include="img\check.png" />
@@ -142,6 +143,13 @@
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="cupponList.aspx.cs">
+      <DependentUpon>cupponList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cupponList.aspx.designer.cs">
+      <DependentUpon>cupponList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="forgotpass.aspx.cs">
       <DependentUpon>forgotpass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -49,7 +49,7 @@ namespace Cuppon_sharer
                 if (type == ".jpg" || type == ".png" || type == ".jpeg" || type == ".avif" || type == ".apng" || type == ".svg" || type == ".webp")
                 {
 
-                    if (File.Exists(HttpContext.Current.Server.MapPath("../img/" + fnm)))
+                    if (File.Exists(HttpContext.Current.Server.MapPath("~/img/" + fnm)))
                     {
                         string fn = Path.GetFileNameWithoutExtension(fnm);
                         Random random = new Random();
@@ -177,6 +177,14 @@ namespace Cuppon_sharer
         {
             getcon();
             da = new SqlDataAdapter("select * from "+tbl+"", con);
+            ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+        public DataSet fetchCustom(string tbl,string wh)
+        {
+            getcon();
+            da = new SqlDataAdapter("select * from " + tbl +" " + wh+"", con);
             ds = new DataSet();
             da.Fill(ds);
             return ds;

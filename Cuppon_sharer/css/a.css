@@ -78,7 +78,10 @@ body{
     transform:scale(120%);
 }
 
-
+.blanck1{
+    height:5vh;
+    width:100%;
+}
 /* end-global--------- */
 
 /* nva----------- */
@@ -102,19 +105,21 @@ body{
         color:var(--c2);
     }
 
-
+ .ac:hover{
+     text-align:left !important;
+ }
 .ac:hover, .ac:hover .t {
     background-color: transparent;
-    display: flex;
-    color: var(--c4);
-    margin-top:unset;
+    /*display: flex;*/
+    /*color: var(--c4);*/
+    /*margin-top:unset;*/
     border: none;
-    text-align: center;
-    line-height: 3.5rem;
+    /*text-align: center;*/
+    /*line-height: 3.5rem;*/
 }
 nav {
     height: 100vh;
-    width: 5%;
+    width: 6%;
     z-index: 11;
     float: left;
     left: 0;
@@ -152,7 +157,7 @@ a:hover svg{
 a:hover{
     border-radius: 0 30px 30px 0;
     border-bottom:2px solid var(--c3);
-    width: 10rem;;
+    width: 10rem;
     text-align: left;
     background-color: var(--c1);
 }
@@ -170,7 +175,7 @@ a:hover   path,circle{
 .active {
     border-radius: 0 30px 30px 0;
     border-bottom: 2px solid var(--c3);
-    width: 8rem;
+    width: 10rem;
     text-align: left;
     background-color: var(--c1);
 }
@@ -383,7 +388,10 @@ table{
     text-decoration:none;
     color:var(--c4);
 }
-    .itm:hover{
+.itm{
+    margin:2rem;
+}
+.itm:hover{
     transform:scale(110%);
     box-shadow:.5rem .5rem .5rem grey;
     
